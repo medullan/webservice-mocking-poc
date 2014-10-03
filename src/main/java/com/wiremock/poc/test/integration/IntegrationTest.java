@@ -53,7 +53,7 @@ import com.wiremock.poc.HomeController;
 	"file:src/main/webapp/WEB-INF/spring/root-context.xml"
 	})
 	})
-@ActiveProfiles("production")
+@ActiveProfiles("local")
 public class IntegrationTest {
 
     @Autowired
