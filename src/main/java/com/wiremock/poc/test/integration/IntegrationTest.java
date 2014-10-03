@@ -80,6 +80,5 @@ public class IntegrationTest {
         ResultActions actions = this.mockMvc.perform(get("/"));
         actions.andDo(print()); // action is logged into the console
         actions.andExpect(status().isOk());
-        actions.andExpect(content().contentType("application/xml"));
     }
 }
