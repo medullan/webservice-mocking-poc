@@ -79,6 +79,6 @@ public class IntegrationTest {
     public void getVisitsXml() throws Exception {
         ResultActions actions = this.mockMvc.perform(get("/"));
         actions.andDo(print()); // action is logged into the console
-        actions.andExpect(status().isOk());
+        actions.andExpect(status().isBadGateway());
     }
 }
