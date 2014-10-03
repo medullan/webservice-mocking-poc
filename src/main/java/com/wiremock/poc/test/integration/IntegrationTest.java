@@ -76,7 +76,7 @@ public class IntegrationTest {
     }
     
     @Test
-    public void getVisitsXml() throws Exception {
+    public void testHelloController() throws Exception {
         ResultActions actions = this.mockMvc.perform(get("/"));
         actions.andDo(print()); // action is logged into the console
         actions.andExpect(status().isBadGateway());
