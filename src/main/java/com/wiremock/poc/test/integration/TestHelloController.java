@@ -54,7 +54,7 @@ import com.wiremock.poc.HomeController;
 	})
 	})
 @ActiveProfiles("local")
-public class IntegrationTest {
+public class TestHelloController {
 
     @Autowired
     private WebApplicationContext webApplicationContext;
