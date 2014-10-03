@@ -43,7 +43,7 @@ public class HomeController {
 		
 		String environment = System.getProperty("spring.profiles.active");
 		logger.debug("environment " + environment);
-		
+		logger.error("environment " + environment);
         Client client = Client.create();
         Object weatherObject = null;
         WebResource webResource = client.resource(weatherService.getEndPoint());
