@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Profile("local")
 public class MockWeatherService implements WeatherService {
 
-	String endPoint = "http://localhost/weather";
+	String endPoint = "http://localhost:9999/weather";
 	
 	@Override
 	public String getEndPoint() {
