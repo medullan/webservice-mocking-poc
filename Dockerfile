@@ -13,7 +13,4 @@ RUN wget http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock/1.50/wire
 
 RUN nohup java -jar /vagrant/wiremock-1.50-standalone.jar  --port=9999  > /dev/null 2>&1 &
 
-
-polyfoods1
-PFl8301#!
 EXPOSE 9999
