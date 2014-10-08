@@ -11,6 +11,6 @@ RUN yum -y install wget
 
 RUN wget http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock/1.50/wiremock-1.50-standalone.jar
 
-RUN nohup java -jar /vagrant/wiremock-1.50-standalone.jar  --port=9999  > /dev/null 2>&1 &
+CMD ["nohup java -jar /vagrant/wiremock-1.50-standalone.jar  --port=9999  > /dev/null 2>&1 &"]
 
 EXPOSE 9999
