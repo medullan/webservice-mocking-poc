@@ -40,7 +40,6 @@ import com.wiremock.poc.HomeController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-//@ContextConfiguration("VisitsViewTests-config.xml")
 @ContextHierarchy({
 	@ContextConfiguration(locations = {
 	"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml"
