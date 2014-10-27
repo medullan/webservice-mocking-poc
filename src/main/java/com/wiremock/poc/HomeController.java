@@ -39,11 +39,7 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		String environment = System.getProperty("spring.profiles.active");
-		logger.debug("environment " + environment);
-		logger.error("environment " + environment);
         Client client = Client.create();
         Object weatherObject = null;
         WebResource webResource = client.resource(weatherService.getEndPoint());
