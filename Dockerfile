@@ -1,4 +1,4 @@
-ROM fedora:latest
+FROM fedora:latest
 
 MAINTAINER Denis Bell
 
@@ -9,10 +9,14 @@ RUN yum -y install java-1.7.0-openjdk
 
 RUN yum -y install wget
 
+RUN yum -y install git
+
 RUN wget http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock/1.50/wiremock-1.50-standalone.jar
 
-WORKDIR /root
+RUN git clone https://github.com/denisdbell/wiremock-mock-services.git
 
-CMD ["nohup java -jar /vagrant/wiremock-1.50-standalone.jar  --port=9999  > /dev/null 2>&1 &"]
+RUN  mv wiremock-1.50-standalone.jar wiremock-mock-services
+
+ENTRYPOINT ["java","-jar","/wiremock-mock-services/wiremock-1.50-standalone.jar","--port=9999"]
 
 EXPOSE 9999
