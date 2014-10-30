@@ -13,7 +13,7 @@ RUN yum -y install git
 
 RUN wget http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock/1.50/wiremock-1.50-standalone.jar
 
-RUN git clone https://github.com/denisdbell/wiremock-mock-services.git
+RUN git clone https://github.com/medullan/wiremock-mock-services.git
 
 RUN  mv wiremock-1.50-standalone.jar wiremock-mock-services
 
